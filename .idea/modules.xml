@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/1_20_1_Freezes_Fixme/1_20_1_Freezes_Fixme.iml" filepath="$PROJECT_DIR$/1_20_1_Freezes_Fixme/1_20_1_Freezes_Fixme.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NESM.main.iml" filepath="$PROJECT_DIR$/.idea/modules/NESM.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/NESM.test.iml" filepath="$PROJECT_DIR$/.idea/modules/NESM.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.esm.nightmare.NESM.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.esm.nightmare.NESM.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.esm.nightmare.NESM.test.iml" filepath="$PROJECT_DIR$/.idea/modules/com.esm.nightmare.NESM.test.iml" />
+    </modules>
+  </component>
+</project>
