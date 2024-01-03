@@ -67,8 +67,12 @@ public final class ESMConfig {
 	public static final ForgeConfigSpec.ConfigValue<Integer> MinDungeonDuplicationClones;
 	
 	public static final ForgeConfigSpec.ConfigValue<String> SiegeEntityWhitelist;
+
+//	public static final ForgeConfigSpec.ConfigValue<boolean> UseBlockWhitelist;
+
 	public static final ForgeConfigSpec.ConfigValue<String> BlocksEntitiesCannotDigThrough;
-	
+//	public static final ForgeConfigSpec.ConfigValue<String> BlocksEntitiesCanDigThrough;
+
 	public static final ForgeConfigSpec.ConfigValue<String> RideableMobs;
 	//public static final ForgeConfigSpec.ConfigValue<List> RideableMobsTest;
 	public static final ForgeConfigSpec.ConfigValue<String> JockeyMobs;
@@ -136,14 +140,12 @@ public final class ESMConfig {
 		
 		MaxDungeonDuplicationClones = BUILDER.comment("Maximum Duplicated Enemies FROM A DUNGEON. Recommend Min. 1, Max. 6. Must be greater than min duplication clones and greater than 0.").define("maxdungeondupes", 6);
 		MinDungeonDuplicationClones = BUILDER.comment("Maximum Duplicated Enemies FROM A DUNGEON. Recommend Min. 0, Max. 3. Must be less than max duplication clones, or, will use max dupes value.").define("mindungeondupes", 1);
-		
-		
-		
+				
 		SiegeEntityWhitelist = BUILDER.comment("Entities that will besiege players.").define("siegewhitelist", "spider,cave spider,creeper,skeleton,witch,"
 				+ "ghast,giant,husk,hoglin,pillager,vindicator,illusioner,evoker,ravager,shulker,silverfish,stray,slime,witch,zoglin,"
 				+ "zombie,zombie villager,zombified piglin,zoglin,drowned,zombie villager,Wither Skeleton,pillager");
 		
-		BlocksEntitiesCannotDigThrough = BUILDER.comment("Any part of a block name, which defines which blocks that siege monsters CANNOT break to try and get to your positon.").define("siegebreakableblockblacklist",
+		BlocksEntitiesCannotDigThrough = BUILDER.comment("Any part of a block name, which defines which blocks that siege monsters CANNOT break to try and get to your position.").define("siegeBreakableBlockBlacklist",
 				"_ore,"
 				+ "_sign,air,water,lava,_bed,rail,_block,obsidian,torch,fire,spawner,ladder,furnace,level,iron_door,pressure_plate,_button,sugar_cane,"
 				+ "juke,soul_,portal,cake,repeater,trapdoor,iron_bars,chain,vine,lily_pad,enchanting,brewing,cauldron,end_,dragon,potted_,skull,_head,"
