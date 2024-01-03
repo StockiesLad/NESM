@@ -103,7 +103,7 @@ siegewhitelist = "spider,cave spider,creeper,skeleton,witch,ghast,giant,husk,hog
 #Any part of a block name, which defines which blocks that siege monsters CANNOT break to try and get to your positon.
 siegebreakableblockblacklist = "_ore,_sign,air,water,lava,_bed,rail,_block,obsidian,torch,fire,spawner,ladder,furnace,level,iron_door,pressure_plate,_button,sugar_cane,juke,soul_,portal,cake,repeater,trapdoor,iron_bars,chain,vine,lily_pad,enchanting,brewing,cauldron,end_,dragon,potted_,skull,_head,anvil,chest,dropper,comparator,hopper,detector,Pillar,terracotta,light,prismarine,book,grass,snow,flower,sapling,bush,stem,dragon,carrots,potatoes,detector,powered,concrete,barrier,carpet,banner,beet,void,shulker,structure,compost,piston,dispenser,fern,pickle,chorus,purpur,beacon,conduit,frame,lectern,smith,ancient,armor,wither,barrel,cutter,hive,lode,respawn,sculk,brick,copper"
 #Defines all mobs that can spawn as rideable by spawning monsters. E.g. 'chicken' will cause enemies to spawn riding chickens.
-rideablemobs = "creeper,spider,skeleton,chicken,pig,skeleton horse,zombie horse"
+rideablemobs = "creeper,spider,skeleton,chicken,pig,skeleton_horse,zombie_horse"
 #Mobs that can spawn riding other mobs.
-jockeymobs = "creeper,skeleton,zombie,pillager,zombified piglin"
+jockeymobs = "creeper,skeleton,zombie,pillager,zombified_piglin"
 

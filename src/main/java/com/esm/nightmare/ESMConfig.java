@@ -2,6 +2,8 @@ package com.esm.nightmare;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 
+import java.util.List;
+
 public final class ESMConfig {
 	
 	public static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
@@ -68,6 +70,7 @@ public final class ESMConfig {
 	public static final ForgeConfigSpec.ConfigValue<String> BlocksEntitiesCannotDigThrough;
 	
 	public static final ForgeConfigSpec.ConfigValue<String> RideableMobs;
+	//public static final ForgeConfigSpec.ConfigValue<List> RideableMobsTest;
 	public static final ForgeConfigSpec.ConfigValue<String> JockeyMobs;
 	
 	
@@ -149,10 +152,11 @@ public final class ESMConfig {
 				+ "chorus,purpur,beacon,conduit,frame,lectern,smith,ancient,armor,wither,barrel,cutter,hive,lode,respawn,sculk,brick,copper");
 		
 		RideableMobs = BUILDER.comment("Defines all mobs that can spawn as rideable by spawning monsters. E.g. 'chicken' will cause enemies to spawn riding chickens.").define("rideablemobs", 
-				"creeper,spider,skeleton,chicken,pig,skeleton horse,zombie horse");
-		
-		JockeyMobs = BUILDER.comment("Mobs that can spawn riding other mobs.").define("jockeymobs", 
-				"creeper,skeleton,zombie,pillager,zombified piglin");
+				"creeper,spider,skeleton,chicken,pig,skeleton_horse,zombie_horse");
+
+
+		JockeyMobs = BUILDER.comment("Mobs that can spawn riding other mobs.").define("jockeymobs",
+				"creeper,skeleton,zombie,pillager,vindicator,witch,zombified_piglin");
 		
 		SPEC = BUILDER.build();
 		

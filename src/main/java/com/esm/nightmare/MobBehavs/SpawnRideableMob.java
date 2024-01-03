@@ -29,25 +29,39 @@ public class SpawnRideableMob {
 
 	// Create an entity for this mob to ride
 	public SpawnRideableMob(Entity Jockey) {
+		try{
 				
 		RefreshEntityList();
 
-		ServerLevel Lvl = (ServerLevel)Jockey.level();	
-		
-		BlockPos Above = Jockey.blockPosition().above();
-		boolean isAboveOK = Lvl.getBlockState(Above).isAir();
+		ServerLevel Lvl = (ServerLevel)Jockey.level();
 
-		BlockPos Above_2 = Above.above();
-		boolean isAboveOK_2 = Lvl.getBlockState(Above_2).isAir();
+		if (!Lvl.isNaturalSpawningAllowed(Jockey.chunkPosition())){
+			//LOGGER.info("Chunk not loaded yet");
+			return;
+		}
 
-		if (isAboveOK && isAboveOK_2) {
+		else {
+			//LOGGER.info("Chunk is loaded: " + Lvl.toString());
+			BlockPos Above = Jockey.blockPosition().above();
+			boolean isAboveOK = Lvl.getBlockState(Above).isAir();
 
-			if (isJockeyMob(Jockey)) {
+			BlockPos Above_2 = Above.above();
+			boolean isAboveOK_2 = Lvl.getBlockState(Above_2).isAir();
 
-				RideAMob(Jockey);
-		
+			if (isAboveOK && isAboveOK_2) {
+
+			LOGGER.info("Spawning Jockey at: " + Jockey.blockPosition().toString());
+
+				if (isJockeyMob(Jockey)) {
+					RideAMob(Jockey);
+				}
 			}
 		}
+	}
+	catch (Exception e) {
+        LOGGER.error("Error in SpawnRideableMob: " + e.getMessage());
+        e.printStackTrace();
+    }
 	}
 
 	// Refreshes list of rideable mobs and jockeying mobs on first initialization
@@ -68,8 +82,6 @@ public class SpawnRideableMob {
 		}
 
 	}
-
-
 
 	boolean isJockeyMob(Entity Jockey) {
 		return ESMConfig.JockeyMobs.get().contains(Jockey.getName().getString().toLowerCase());

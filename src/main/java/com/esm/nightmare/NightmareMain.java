@@ -96,7 +96,6 @@ public class NightmareMain {
 	public void onEntitySpawn(MobSpawnEvent.FinalizeSpawn e) {	//1.20
 		// Get expanded entity properties
 		Entity Entity_Class = e.getEntity();
-		
 
 		//Sieges can recur every X days. If on Siege day, then
 		if (isSiegeDay(Entity_Class)) {
@@ -173,13 +172,14 @@ public class NightmareMain {
 							new DuplicateMob(M, TotalDupes);
 						}
 					}
-
+						// if jockeys are allowed
 					if (ESMConfig.isSpecialJockeyMobsAllowed.get()) {
 						// Check if this entity should ride a mob (with RNG)
 						double RNG_Val = new RNG().GetDouble(0.0, 100.0);
 						double Jockey_Chance = ESMConfig.SpecialJockeyGenerationChance.get();
 						if (RNG_Val < Jockey_Chance) {
 							// This entity will spawn riding a special jockey animal
+
 							new SpawnRideableMob(Entity_Class);
 						}
 
@@ -197,6 +197,7 @@ public class NightmareMain {
 				}
 			}
 		}
+	
 	}
 
 	// Based on RNG, should this entity duplicate?
