@@ -4,13 +4,11 @@ import java.util.Random;
 
 public class RNG {
 
-	
 	//Generate a random number between Min (inclusive) and Max (inclusive)
 	public RNG()
 	{		
 
-	}	
-		
+	}
 	public int GetInt(int Min, int Max) {
 		//Get random number for property weights
 		Random New_RNG = new Random();
@@ -26,7 +24,6 @@ public class RNG {
 		double Weights_Pct = Weights_Diff / 100.0;
 		double Rand_PctInc = New_RNG.nextDouble();
 		double Final_Val = Min + (Weights_Diff * Rand_PctInc);
-		
 		return Final_Val;		//1.20.1
 		//return New_RNG.nextDouble(Min, Max); //1.19.3
 	}

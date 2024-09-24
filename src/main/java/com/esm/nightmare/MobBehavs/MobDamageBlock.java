@@ -10,8 +10,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 
 public class MobDamageBlock {
-			 
-    
 	public static final String Block_Blacklist = ESMConfig.BlocksEntitiesCannotDigThrough.get().toLowerCase();    
     
 	private static final Logger LOGGER = LogManager.getLogger();
@@ -19,9 +17,8 @@ public class MobDamageBlock {
 	//Cause entity to destroy a block
 	public MobDamageBlock(Entity Entity_Class, Block Curr_Block, BlockPos Block_Pos)
 	{
-		
 		String Block_Name = Curr_Block.getName().getString();
-		
+		LOGGER.info("Mob is looking at: "+ Block_Name);
 		//Can this block be broken?
 		boolean isExcluded = isExcludedBlock(Block_Name);
 		
@@ -29,7 +26,6 @@ public class MobDamageBlock {
 		if(!isExcluded)
 		{
 			new MobPlaceBlock(Entity_Class, Blocks.AIR, Block_Pos);
-			
 		}
 		
 	}	

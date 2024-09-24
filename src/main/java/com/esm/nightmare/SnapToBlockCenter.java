@@ -11,7 +11,6 @@ public class SnapToBlockCenter {
 	//Entity_Class - Entity to snap to center of block
 	public SnapToBlockCenter(Entity Entity_Class)
 	{
-	
 		//Get entity block position
 		BlockPos Block_Pos = Entity_Class.blockPosition();
 		

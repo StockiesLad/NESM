@@ -14,7 +14,7 @@ public class GiveRandomArmor {
 	//Items that each entity can have
 	Item[] Armor_Head = {Items.CHAINMAIL_HELMET, Items.GOLDEN_HELMET, Items.IRON_HELMET, Items.LEATHER_HELMET};
 	Item[] Armor_Chest = {Items.CHAINMAIL_CHESTPLATE, Items.GOLDEN_CHESTPLATE, Items.IRON_CHESTPLATE, Items.LEATHER_CHESTPLATE};
-	Item[] Armor_Leggins = {Items.CHAINMAIL_LEGGINGS, Items.GOLDEN_LEGGINGS, Items.IRON_LEGGINGS, Items.LEATHER_LEGGINGS};
+	Item[] Armor_Leggings = {Items.CHAINMAIL_LEGGINGS, Items.GOLDEN_LEGGINGS, Items.IRON_LEGGINGS, Items.LEATHER_LEGGINGS};
 	Item[] Armor_Boots = {Items.CHAINMAIL_BOOTS, Items.GOLDEN_BOOTS, Items.IRON_BOOTS, Items.LEATHER_BOOTS};
 	
 	//Gives this entity random armor set
@@ -27,7 +27,7 @@ public class GiveRandomArmor {
 			int ArmorType = new RNG().GetInt(0,Armor_Head.length);
 			Item Head_Armor = Armor_Head[ArmorType];
 			Item Chest_Armor = Armor_Chest[ArmorType];
-			Item Leggings_Armor = Armor_Leggins[ArmorType];
+			Item Leggings_Armor = Armor_Leggings[ArmorType];
 			Item Boots_Armor = Armor_Boots[ArmorType];
 			
 			//Set armor
