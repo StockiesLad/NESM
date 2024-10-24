@@ -150,7 +150,8 @@ public class NightmareMain {
 						// If mob was not summoned after it was spawned and is not loading from save,
 						// then...
 						if (e.getSpawnType() != MobSpawnType.MOB_SUMMONED
-								&& e.getSpawnType() != MobSpawnType.CHUNK_GENERATION) {
+								&& e.getSpawnType() != MobSpawnType.CHUNK_GENERATION &&
+								e.getSpawnType() != MobSpawnType.STRUCTURE) {
 							int TotalDupes = new RNG().GetInt(MinDupes, MaxDupes);
 							if (ShouldDuplicate()) {
 								new DuplicateMob(M, TotalDupes);
